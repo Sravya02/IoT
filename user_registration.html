@@ -1,0 +1,138 @@
+<html>
+<title>NewUser-Registration</title>
+
+<head>
+	<style>
+		body {
+			background-color: #1f94ab;
+			background-size: 100% 100%;
+			height: 570px;
+			background- repeat: no-repeat
+		}
+
+		.abc {
+			color: white;
+			background-color: blue;
+			display: inline-block;
+			font-size: 25px;
+		}
+	</style>
+	<script>
+		function check()
+ {
+       if(document.form1.fname.value=="")
+      {
+       alert("please enter your first name:");
+       document.form1.fname.focus();
+       return false;
+       }
+       if(document.form1.lname.value=="")
+      {
+       alert("please enter your last name:");
+       document.form1.lname.focus();
+       return false;
+       }
+if ( ( document.form1.gender[0].checked == false ) &&                 (document.form1.gender[1].checked == false ) )
+      {
+       alert ( "Please choose your Gender: Male or Female" );
+       return false;
+       }
+      if(document.form1.uname.value=="")
+     {
+      alert("please enter your user name:");
+      document.form1.lname.focus();
+      return false;
+      }
+      if(document.form1.pswd.value=="")
+     { 
+      alert("please enter the password:");
+      document.form1.pswd.focus();
+      return false;
+      }
+      if((document.form1.pswd.value.length<8)||(document.form1.pswd.value.length>14))
+     {
+      alert("please enter the password with length between 8 to 14 properly:");
+      document.form1.pswd.focus();
+      return false; 
+      }
+      if(document.form1.repswd.value=="")
+     { 
+      alert("please re-enter the password:");
+      document.form1.repswd.focus();
+      return false;
+      }
+      if(document.form1.pswd.value!=document.form1.repswd.value)
+     {
+      alert("please re-enter the  password properly:");
+      document.form1.repswd.focus();
+      return false;
+      }
+     return true;
+     }
+	</script>
+</head>
+
+<body>
+	<div class="home">
+		<div class="div3" style="background-color:#3C7BB2;;">
+			<table border="0" width="100%">
+				<tr>
+					<td><img src="air pollution.jpg" width="150" height="150"/></td><td><center>
+     <p  style="color:white;display: inline-block;font-size:35px;font-family:Architect;">
+AIR POLLUTION CHECK USING IOT</p>
+     </center></td></tr>
+     </table>
+     </div>
+     <div class="div1" style="background-color:#044072;">
+     <table border="1" style="border-color:#044072;" width="100%">
+     <form name="f">
+     <tr><td>
+     <a href="home.html" target="f3" style="color:white;font-size:25px;">HOME</td>
+     <td style="color:white;font-size:25px;">ABOUT US</td>
+     <td style="color:white;font-size:25px;">POLLUTION INFO</td>
+     <td style="color:white;font-size:25px;">HEALTH ISSUES</td> 
+     <td style="color:white;font-size:25px;">CHECK POLLUTION</td> 
+     </tr>
+     </form>
+     </table>
+     </div>
+     <div >
+     <br>
+     <h2><p align="center" style="color:#0a3f6d;">
+       USER REGISTRATION FORM</p></h2>
+     <form action="registration.php" name="form1" method="POST">
+     <table align="center" cellspacing="10">
+     <tr>
+     <td style="color:#0a3f6d;font-size:20px;"><b>First Name:</b></td>
+     <td><input type="text" name="fname" maxlength="30"/></td>
+     </tr>
+     <tr>
+     <td style="color:#0a3f6d;font-size:20px;"><b>Last Name:</b></td>
+     <td><input type="text" name="lname" maxlength="30"/></td>
+     </tr>
+     <tr>
+ <td style="color:#0a3f6d;font-size:20px;"><b>Gender:</b></td>
+ <td><input type="radio" name="gender" value="male" > Male<br>
+             <input type="radio" name="gender" value="female"> Female<br></td>
+     </tr>
+     <tr>
+     <td style="color:#0a3f6d;font-size:20px;"><b>User Name:</b></td>
+     <td><input type="text" name="uname" maxlength="30"/></td>
+     </tr>
+     <tr>
+     <td style="color:#0a3f6d;font-size:20px;"><b>Password:</b></td>
+     <td><input type="password" name="pswd" maxlength="30"/></td>
+     </tr>
+     <tr>
+     <td style="color:#0a3f6d;font-size:20px;"><b>Re-enter Password:</b></td>
+     <td><input type="password" name="repswd" maxlength="30" /></td>
+     </tr>
+     <tr><td align="right">
+     <input class="abc" type="submit" name="submit" value="Submit" 
+       OnClick="return      check()"></td>  &nbsp;&nbsp
+     <td><input class="abc" type="reset" name="reset" value="Reset"></td></tr>
+     </table>
+     </form>
+     </div>
+     </body>
+     </html>
